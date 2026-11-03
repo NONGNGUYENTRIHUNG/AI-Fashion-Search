@@ -6,7 +6,13 @@ Fashion Lens lets users upload a clothing photo, enter a description, or combine
 
 Built as an end-to-end Data Science project, it connects dataset preparation, pretrained image representations, supervised learning, evaluation, and model inference to a React website through a FastAPI backend.
 
-> **Repository status:** This repository currently documents the locally implemented application. Application source code and a home-screen screenshot have not yet been uploaded. Setup commands below apply once the project source is present.
+> **Repository status:** This repository currently documents the locally implemented application. The home-screen preview is included below; application source code has not yet been uploaded. Setup commands below apply once the project source is present.
+
+## Home screen
+
+![Fashion Lens home screen with photo upload, text search, and a catalog of 132 pieces](docs/images/home-screen.png)
+
+*The local application’s Discover screen, with image upload and text search.*
 
 ## Purpose
 
