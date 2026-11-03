@@ -1,0 +1,131 @@
+{
+  "encoder": "sentence-transformers/clip-ViT-B-32",
+  "training": "Logistic regression on frozen CLIP embeddings; CLIP is not fine-tuned.",
+  "train_images": 2089,
+  "validation_images": 422,
+  "classes": [
+    "dress",
+    "jeans",
+    "shirt",
+    "shoes",
+    "shorts",
+    "tshirt"
+  ],
+  "trials": [
+    {
+      "C": 0.1,
+      "validation_macro_f1": 0.916529289584208
+    },
+    {
+      "C": 1.0,
+      "validation_macro_f1": 0.9763010705447205
+    },
+    {
+      "C": 10.0,
+      "validation_macro_f1": 0.9861012831845253
+    }
+  ],
+  "validation": {
+    "dress": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 61.0
+    },
+    "jeans": {
+      "precision": 0.9857142857142858,
+      "recall": 0.9857142857142858,
+      "f1-score": 0.9857142857142858,
+      "support": 70.0
+    },
+    "shirt": {
+      "precision": 0.971830985915493,
+      "recall": 0.971830985915493,
+      "f1-score": 0.971830985915493,
+      "support": 71.0
+    },
+    "shoes": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 73.0
+    },
+    "shorts": {
+      "precision": 0.9714285714285714,
+      "recall": 0.9855072463768116,
+      "f1-score": 0.9784172661870504,
+      "support": 69.0
+    },
+    "tshirt": {
+      "precision": 0.987012987012987,
+      "recall": 0.9743589743589743,
+      "f1-score": 0.9806451612903225,
+      "support": 78.0
+    },
+    "accuracy": 0.985781990521327,
+    "macro avg": {
+      "precision": 0.9859978050118895,
+      "recall": 0.9862352487275942,
+      "f1-score": 0.9861012831845253,
+      "support": 422.0
+    },
+    "weighted avg": {
+      "precision": 0.9858189204160768,
+      "recall": 0.985781990521327,
+      "f1-score": 0.9857846302074683,
+      "support": 422.0
+    }
+  },
+  "majority_baseline_accuracy": 0.16587677725118483,
+  "test": {
+    "dress": {
+      "precision": 0.9863013698630136,
+      "recall": 1.0,
+      "f1-score": 0.993103448275862,
+      "support": 72.0
+    },
+    "jeans": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 58.0
+    },
+    "shirt": {
+      "precision": 0.9861111111111112,
+      "recall": 0.9861111111111112,
+      "f1-score": 0.9861111111111112,
+      "support": 72.0
+    },
+    "shoes": {
+      "precision": 1.0,
+      "recall": 0.9875,
+      "f1-score": 0.9937106918238994,
+      "support": 80.0
+    },
+    "shorts": {
+      "precision": 0.9866666666666667,
+      "recall": 1.0,
+      "f1-score": 0.9932885906040269,
+      "support": 74.0
+    },
+    "tshirt": {
+      "precision": 0.9859154929577465,
+      "recall": 0.9722222222222222,
+      "f1-score": 0.9790209790209791,
+      "support": 72.0
+    },
+    "accuracy": 0.9906542056074766,
+    "macro avg": {
+      "precision": 0.9908324400997562,
+      "recall": 0.9909722222222223,
+      "f1-score": 0.9908724701393131,
+      "support": 428.0
+    },
+    "weighted avg": {
+      "precision": 0.9906844566738974,
+      "recall": 0.9906542056074766,
+      "f1-score": 0.990638247233604,
+      "support": 428.0
+    }
+  }
+}

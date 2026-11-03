@@ -6,8 +6,6 @@ Fashion Lens lets users upload a clothing photo, enter a description, or combine
 
 Built as an end-to-end Data Science project, it connects dataset preparation, pretrained image representations, supervised learning, evaluation, and model inference to a React website through a FastAPI backend.
 
-> **Repository status:** This repository currently documents the locally implemented application. The home-screen preview is included below; application source code has not yet been uploaded. Setup commands below apply once the project source is present.
-
 ## Home screen
 
 ![Fashion Lens home screen with photo upload, text search, and a catalog of 132 pieces](docs/images/home-screen.png)
@@ -130,7 +128,12 @@ The validation majority-class baseline accuracy was **16.59%**.
 
 ## Run locally
 
-Once application source is uploaded, use the commands below.
+Clone the repository, then run the backend and frontend in separate terminals:
+
+```powershell
+git clone https://github.com/NONGNGUYENTRIHUNG/AI-Fashion-Search.git
+cd AI-Fashion-Search
+```
 
 ### Requirements
 
@@ -182,7 +185,7 @@ From the project root:
 .\.venv\Scripts\python.exe -u -m ml.train --data data/fashion_v1
 ```
 
-The dataset revision must contain the Parquet data files. The local experiment used the dataset's `main` revision after an earlier empty revision was corrected; do not use the obsolete revision from the initial add-on. For future reproducible runs, record the resolved dataset commit.
+The downloader uses the dataset's `main` revision. For future reproducible runs, record the resolved dataset commit.
 
 After selecting model settings using validation data, run the final test:
 
@@ -192,7 +195,10 @@ After selecting model settings using validation data, run the final test:
 
 The current trainer repeats training and validation selection before optional test evaluation. Keep model choices fixed when evaluating test performance.
 
+The repository includes the trained classifier and [evaluation report](models/metrics.json) from the completed experiment. Retraining is optional. Catalog images, dataset images, CLIP weights, and installed dependencies are not bundled; add your own permitted images to `data/catalog/` before searching.
+
 Outputs:
+
 - `models/classifier.joblib` — trained classifier and encoder identifier.
 - `models/metrics.json` — validation trials and optional test report.
 
@@ -200,7 +206,7 @@ Training replaces those artifacts; preserve earlier runs before starting another
 
 ## Project structure
 
-Expected application layout:
+Application layout:
 
 ```text
 backend/
@@ -266,3 +272,4 @@ These are proposed improvements, not current features.
 Dataset images and pretrained weights are separate from this project's code. Review their respective terms before redistribution or commercial use.
 
 **Author:** [Nguyen Tri Hung Nong](https://github.com/NONGNGUYENTRIHUNG)
+
